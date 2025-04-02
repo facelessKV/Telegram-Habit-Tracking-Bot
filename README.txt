@@ -1,155 +1,177 @@
-# КАК ЗАПУСТИТЬ TELEGRAM-БОТА ДЛЯ ОТСЛЕЖИВАНИЯ ПРИВЫЧЕК
+📅 Telegram Habit Tracking Bot
 
-## Содержание
-1. Получение токена для бота
-2. Инструкция для Windows
-3. Инструкция для Linux
-4. Как пользоваться ботом
+Want to build better habits and stay consistent? This bot helps you track your daily habits, set reminders, and monitor your progress—all within Telegram!
+With this bot, you can create a structured routine and develop good habits effortlessly.
 
-## 1. ПОЛУЧЕНИЕ ТОКЕНА ДЛЯ БОТА
+✅ What does it do?
 
-Прежде чем начать, вам нужно получить токен для вашего бота:
+ • 📊 Helps you set and track daily, weekly, or monthly habits
+ • 🔔 Sends reminders to keep you on track
+ • 📈 Displays progress reports to keep you motivated
+ • 🎯 Supports custom habit categories and streak tracking
 
-1. Откройте Telegram и найдите пользователя @BotFather
-2. Отправьте команду /newbot
-3. Следуйте инструкциям BotFather:
-   - Укажите отображаемое имя бота (например, "Мой трекер привычек")
-   - Придумайте уникальное имя пользователя для бота (оно должно заканчиваться на "bot", например, "my_habits_tracker_bot")
-4. BotFather отправит вам сообщение с токеном. Он выглядит примерно так: `1234567890:ABCDefGhIJKlmnOPQRstUVwxYZ`
-5. Сохраните этот токен - он понадобится при настройке бота
+🔧 Features
 
-## 2. ИНСТРУКЦИЯ ДЛЯ WINDOWS
+✅ Easy-to-use interface for adding and tracking habits
+✅ Automated reminders to keep you accountable
+✅ Progress visualization to monitor your streaks
 
-### Шаг 1: Установка Python 3.9
+📩 Want to take control of your habits and boost productivity?
 
-1. Скачайте Python 3.9 с официального сайта: https://www.python.org/downloads/release/python-3912/
-   - Прокрутите страницу вниз и выберите "Windows installer (64-bit)" или "Windows installer (32-bit)" в зависимости от вашей системы
-   - Если не знаете, какая у вас система, выбирайте 64-bit
+Contact me on Telegram, and I’ll help you set up this bot to improve your daily routine! 🚀
 
-2. Запустите скачанный файл
-   - **ВАЖНО**: Отметьте галочку "Add Python 3.9 to PATH" перед нажатием "Install Now"
-   - Нажмите "Install Now"
-   - Дождитесь завершения установки и нажмите "Close"
+# HOW TO LAUNCH A TELEGRAM BOT TO TRACK HABITS
 
-### Шаг 2: Загрузка и настройка бота
+## Content
+1. Getting a token for the bot
+2. Instructions for Windows
+3. Instructions for Linux
+4. How to use the bot
 
-1. Создайте на рабочем столе папку с названием "HabitsBot"
+##1. GETTING A TOKEN FOR A BOT
 
-2. Сохраните файл с кодом бота в эту папку с названием "bot.py"
+Before you start, you need to get a token for your bot.:
 
-3. Откройте файл "bot.py" в Блокноте или другом текстовом редакторе
+1. Open Telegram and find the user @BotFather
+2. Send a command /newbot
+3. Follow the instructions of the BotFather:
+   - Specify the bot's display name (for example, "My Habit Tracker")
+- Come up with a unique username for the bot (it must end with "bot", for example, "my_habits_tracker_bot")
+4. BotFather will send you a message with a token. It looks something like this: `1234567890:ABCDefGhIJKlmnOPQRstUVwxYZ`
+5. Save this token - you will need it when setting up the bot.
 
-4. Найдите строку `API_TOKEN = 'YOUR_BOT_TOKEN_HERE'`
+## 2. INSTRUCTIONS FOR WINDOWS
 
-5. Замените 'YOUR_BOT_TOKEN_HERE' на токен, который вы получили от BotFather (вместе с кавычками)
-   - Должно получиться примерно так: `API_TOKEN = '1234567890:ABCDefGhIJKlmnOPQRstUVwxYZ'`
+### Step 1: Install Python 3.9
 
-6. Сохраните и закройте файл
+1. Download Python 3.9 from the official website: https://www.python.org/downloads/release/python-3912 /
+- Scroll down and select "Windows installer (64-bit)" or "Windows installer (32-bit)" depending on your system
+   - If you don't know which system you have, choose 64-bit
 
-### Шаг 3: Установка зависимостей и запуск бота
+2. Run the downloaded file
+   - **IMPORTANT**: Check the box "Add Python 3.9 to PATH" before clicking "Install Now"
+- Click "Install Now"
+- Wait for the installation to complete and click "Close"
 
-1. Нажмите Win+R, введите "cmd" и нажмите Enter
-   - Откроется командная строка Windows
+### Step 2: Download and configure the bot
 
-2. В командной строке перейдите в папку с ботом:
-   ```
+1. Create a folder named "HabitsBot" on your desktop
+
+2. Save the file with the bot code to this folder with the name "bot.py "
+
+3. Open the file "bot.py " in Notepad or another text editor
+
+4. Find the string `API_TOKEN = 'YOUR_BOT_TOKEN_HERE'
+
+5. Replace 'YOUR_BOT_TOKEN_HERE' with the token you received from BotFather (along with the quotes)
+   - It should look something like this: `API_TOKEN = '1234567890:ABCDefGhIJKlmnOPQRstUVwxYZ'
+
+6. Save and close the file
+
+### Step 3: Install dependencies and launch the bot
+
+1. Press Win+R, type "cmd" and press Enter
+   - The Windows command prompt opens
+
+2. At the command prompt, go to the folder with the bot:
+``
    cd Desktop\HabitsBot
    ```
 
-3. Установите необходимые библиотеки:
-   ```
+3. Install the necessary libraries:
+``
    pip install aiogram==3.0.0
    ```
 
-4. Запустите бота:
+4. Launch the bot:
    ```
    python bot.py
    ```
 
-5. Если всё прошло успешно, вы увидите сообщения о запуске бота
-   - Оставьте командную строку открытой, пока хотите, чтобы бот работал
-   - Чтобы остановить бота, нажмите Ctrl+C в командной строке
+5. If everything was successful, you will see messages about the launch of the bot.
+   - Leave the command prompt open while you want the bot to work.
+   - To stop the bot, press Ctrl+C in the command prompt
 
-## 3. ИНСТРУКЦИЯ ДЛЯ LINUX
+## 3. INSTRUCTIONS FOR LINUX
 
-### Шаг 1: Установка Python 3.9
+### Step 1: Install Python 3.9
 
-1. Откройте терминал (Ctrl+Alt+T в большинстве дистрибутивов)
+1. Open the terminal (Ctrl+Alt+T in most distributions)
 
-2. Обновите список пакетов:
+2. Update the package list:
    ```
    sudo apt update
    ```
 
-3. Установите необходимые пакеты для сборки Python:
+3. Install the necessary packages to build Python:
    ```
    sudo apt install software-properties-common -y
    ```
 
-4. Добавьте репозиторий с Python 3.9:
-   ```
+4. Add a repository with Python 3.9:
+``
    sudo add-apt-repository ppa:deadsnakes/ppa -y
    sudo apt update
    ```
 
-5. Установите Python 3.9 и pip:
-   ```
+5. Install Python 3.9 and pip:
+``
    sudo apt install python3.9 python3.9-venv python3.9-dev python3-pip -y
    ```
 
-### Шаг 2: Создание папки для бота и настройка
+### Step 2: Create a folder for the bot and configure
 
-1. Создайте папку для бота:
+1. Create a folder for the bot:
    ```
    mkdir ~/HabitsBot
    cd ~/HabitsBot
    ```
 
-2. Создайте виртуальное окружение:
+2. Create a virtual environment:
    ```
    python3.9 -m venv venv
    source venv/bin/activate
    ```
 
-3. Создайте файл с кодом бота:
+3. Create a file with the bot code:
    ```
    nano bot.py
    ```
 
-4. Вставьте код бота в открывшийся редактор
+4. Paste the bot code into the editor that opens
 
-5. Замените строку `API_TOKEN = 'YOUR_BOT_TOKEN_HERE'` на ваш токен от BotFather
+5. Replace the string `API_TOKEN = 'YOUR_BOT_TOKEN_HERE' with your BotFather token
 
-6. Нажмите Ctrl+O, затем Enter для сохранения файла
+6. Press Ctrl+O, then Enter to save the file.
 
-7. Нажмите Ctrl+X для выхода из редактора
+7. Press Ctrl+X to exit the editor.
 
-### Шаг 3: Установка зависимостей и запуск бота
+### Step 3: Install dependencies and launch the bot
 
-1. Установите необходимые библиотеки:
-   ```
+1. Install the necessary libraries:
+``
    pip install aiogram==3.0.0
    ```
 
-2. Запустите бота:
+2. Launch the bot:
    ```
    python bot.py
    ```
 
-3. Если всё прошло успешно, вы увидите сообщения о запуске бота
-   - Оставьте терминал открытым, пока хотите, чтобы бот работал
-   - Чтобы остановить бота, нажмите Ctrl+C в терминале
+3. If everything was successful, you will see messages about the launch of the bot
+- Leave the terminal open while you want the bot to work.
+   - To stop the bot, press Ctrl+C in the terminal
 
-### Дополнительно: настройка автозапуска (опционально)
+### Optional: Auto-start setting (optional)
 
-Если вы хотите, чтобы бот запускался автоматически при включении сервера:
+If you want the bot to start automatically when the server is turned on:
 
-1. Создайте системный сервис:
+1. Create a system service:
    ```
    sudo nano /etc/systemd/system/habitsbot.service
    ```
 
-2. Вставьте следующий текст (замените USER на ваше имя пользователя):
+2. Insert the following text (replace USER with your username):
    ```
    [Unit]
    Description=Telegram Habits Tracker Bot
@@ -166,44 +188,44 @@
    WantedBy=multi-user.target
    ```
 
-3. Сохраните и закройте файл (Ctrl+O, Enter, Ctrl+X)
+3. Save and close the file (Ctrl+O, Enter, Ctrl+X)
 
-4. Включите и запустите сервис:
+4. Turn on and start the service:
    ```
    sudo systemctl enable habitsbot.service
    sudo systemctl start habitsbot.service
    ```
 
-5. Проверьте статус работы:
+5. Check the job status:
    ```
    sudo systemctl status habitsbot.service
    ```
 
-## 4. КАК ПОЛЬЗОВАТЬСЯ БОТОМ
+##4. HOW TO USE A BOT
 
-После запуска бота:
+After launching the bot:
 
-1. Откройте Telegram и найдите вашего бота по имени, которое вы указали при создании
+1. Open Telegram and find your bot by the name you specified when creating it.
 
-2. Начните диалог с ботом, отправив команду `/start`
+2. Start a dialogue with the bot by sending the command `/start`
 
-3. Бот поприветствует вас и покажет доступные команды:
-   - `/add` - добавить новую привычку
-   - `/done` - отметить выполнение привычки
-   - `/stats` - посмотреть статистику
+3. The bot will greet you and show you the available commands.:
+   - `/add` - add a new habit
+   - `/done` - mark the completion of a habit
+   - `/stats` - view statistics
 
-4. Чтобы добавить привычку:
-   - Отправьте команду `/add`
-   - Напишите название привычки (например, "Пить 2 литра воды")
-   - Бот подтвердит добавление привычки
+4. To add a habit:
+- Send the command `/add`
+   - Write the name of the habit (for example, "Drink 2 liters of water")
+- The bot will confirm the addition of the habit
 
-5. Чтобы отметить выполнение привычки:
-   - Отправьте команду `/done`
-   - Выберите нужную привычку из списка
-   - Бот подтвердит выполнение привычки
+5. To mark the completion of a habit:
+- Send the command `/done`
+   - Select the desired habit from the list
+   - The bot will confirm the fulfillment of the habit
 
-6. Чтобы посмотреть статистику:
-   - Отправьте команду `/stats`
-   - Бот покажет, сколько раз вы выполнили каждую привычку
+6. To view the statistics:
+   - Send the `/stats` command
+   - The bot will show you how many times you have completed each habit.
 
-Теперь вы можете отслеживать свои привычки каждый день!
+Now you can track your habits every day!
